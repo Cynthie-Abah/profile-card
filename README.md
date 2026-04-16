@@ -24,7 +24,7 @@ Each element includes a `data-testid` attribute for automated testing, ensuring 
 ## Live Demo
 
 **Live Preview:** [View on Netlify]()  
- **Repository:** [GitHub Repo]()
+ **Repository:** [GitHub Repo](https://github.com/Cynthie-Abah/profile-card.git)
 
 ---
 
@@ -50,7 +50,7 @@ Each element includes a `data-testid` attribute for automated testing, ensuring 
 1. **Clone this repository:**
 
    ```bash
-   git clone
+   git clone https://github.com/Cynthie-Abah/profile-card.git
    ```
 
 2. **Navigate into the project folder:**
