@@ -1,36 +1,44 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
 .hero {
   width: 100%;
-  padding: 1.2rem;
-  padding-top: .5rem;
-    display: flex;
-  justify-content: center;
-  align-items: center;
+  padding: 1rem;
+  padding-top: 0.5rem;
   min-height: 50vh;
 }
 .profile-card {
-   max-width: 1000px;
+  max-width: 1000px;
   min-height: auto;
   background: #000;
   color: #fff;
-  padding: 1.5rem;
+  padding: 1.2rem;
   border-radius: 1.5rem;
   height: auto;
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
   gap: 1.2rem;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
   margin-bottom: 1.5rem;
+  margin: 0 auto;
 }
 .profile-card:hover {
   transform: translateY(-4px);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
 }
-.info-box{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1.2rem;
+.info-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
 }
 .avatar {
   width: 100%;
@@ -57,6 +65,7 @@
   border: none;
   cursor: pointer;
   transition: transform 0.2s ease;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
 }
 .edit-icon:hover {
   transform: scale(1.1);
@@ -65,7 +74,7 @@
   text-align: center;
 }
 .info .name {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   letter-spacing: 2px;
   font-weight: 700;
   margin-bottom: 0.4rem;
@@ -74,23 +83,15 @@
   font-style: normal;
 }
 .bio {
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   color: #ccc;
   line-height: 1.5;
-   font-family: "Share Tech Mono", monospace;
+  font-family: "Share Tech Mono", monospace;
   font-weight: 400;
   font-style: normal;
 }
-.time-box{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    font-size: 1rem;
-    flex-wrap: wrap;
-    gap: 1.2rem;
-}
 .time {
+  width: fit-content;
   background: #222222;
   padding: 0.4rem 0.8rem;
   border-radius: 6px;
@@ -99,7 +100,7 @@
 }
 .socials {
   list-style: none;
-  padding: .4rem;
+  padding: 0.4rem 0.6rem;
   background: #ff0;
   color: #000;
   display: flex;
@@ -108,21 +109,29 @@
   gap: 1.2rem;
   flex-wrap: wrap;
   border-radius: 6px;
+  width: fit-content;
+  margin: 1rem auto;
 }
 .socials li {
   cursor: pointer;
-  transition: transform 0.2s ease, color 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    color 0.2s ease;
   display: flex;
   gap: 0.4rem;
   align-items: end;
 }
 .socials li:hover {
   transform: translateY(-2px);
-  color: #555;
+  color: #363636;
 }
 .socials li a {
   color: inherit;
   text-decoration: none;
+  font-family: monospace;
+}
+.socials li a:hover {
+  text-decoration: underline;
 }
 section {
   width: 100%;
@@ -138,8 +147,8 @@ section h3 {
   text-transform: uppercase;
 }
 section ul {
-font-family: "Share Tech Mono", monospace;
-font-weight: 400;
+  font-family: "Share Tech Mono", monospace;
+  font-weight: 400;
   font-style: normal;
   list-style: none;
   margin-left: 0.5rem;
@@ -150,17 +159,46 @@ font-weight: 400;
 }
 section ul li {
   background: #222;
-  padding: .4rem .9rem;
+  padding: 0.4rem 0.9rem;
   border-radius: 5rem;
   color: #ff0;
   border: #ff0 1px solid;
   text-transform: capitalize;
-  transition: transform 0.2s ease, color 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    color 0.2s ease;
 }
 section ul li:hover {
   transform: translateY(-2px);
-    color: #555;
-    background: #ff0;
+  color: #222;
+  background: #ff0;
+}
+.name {
+  font-size: 1rem;
+  letter-spacing: 2px;
+  font-weight: 700;
+  font-family: "BBH Sans Bartle", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;
+}
+.name a {
+  text-decoration: none;
+  color: inherit;
+}
+body {
+  background-color: #00000066;
+  background-color: #f4f4f4;
+}
+.desk-nav-bar {
+  width: 85%;
+  margin: 1.3rem auto;
+  padding: 0.6rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 3rem;
 }
 
 @media (min-width: 668px) {
@@ -177,34 +215,36 @@ section ul li:hover {
 }
 
 @media (min-width: 968px) {
-.info-box{
+  .info-box {
     flex-direction: row;
     align-items: center;
     gap: 1.5rem;
-}
-.avatar {
-  width: 400px;
-  height: 250px;
-}
-.info {
-  text-align: left;
-}
-.name {
-  font-size: 1.5rem;
-}
-.bio {
-  font-size: 1rem;
-}
-.time-box{
+  }
+  .avatar {
+    width: 400px;
+    height: 250px;
+  }
+  .info {
+    text-align: left;
+  }
+  .name {
     font-size: 1.2rem;
-}
-.time {
-  padding: 0.5rem 1rem;
-}
-.socials {
-  padding: 0.5rem 1rem;
-}
-section {
-  margin-bottom: 0.1rem;
-}
+  }
+  .bio {
+    font-size: 1rem;
+  }
+  .time-box {
+    font-size: 1.2rem;
+  }
+  .time {
+    padding: 0.5rem 1rem;
+  }
+  .socials {
+    padding: 0.5rem;
+    margin: 1rem;
+    margin-left: 0;
+  }
+  section {
+    margin-bottom: 0.1rem;
+  }
 }
